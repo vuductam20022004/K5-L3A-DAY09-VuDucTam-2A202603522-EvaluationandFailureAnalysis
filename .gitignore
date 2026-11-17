@@ -18,6 +18,7 @@ traces/
 student_drop/
 src/reports/hidden_grade.json
 src/reports/bonus_hidden.json
+src/reports/traps/
 
 # Instructor-only hidden pack. Never push it to this repo.
 src/eval/instructor/
