@@ -8,7 +8,7 @@ Xử lý claim một đơn hàng trong dữ liệu LogiX-VN, tra đơn/policy qu
 
 ## 2. Định nghĩa “chạy đúng”
 
-Nguồn số: `src/reports/baseline_v1.json`, run `E-swarm-20261117-3996`, eval set SHA `3996585493a3`; mỗi item chạy 5 seed. Bản PR phải dùng cùng eval set SHA và bộ `(item_id, seed)`.
+Nguồn số: `src/reports/baseline_v1.json`, run `E-swarm-20261117-84ac`, eval set SHA `84acf97b75bf`; mỗi item chạy 5 seed. Bản PR phải dùng cùng eval set SHA và bộ `(item_id, seed)`.
 
 | Metric | Ý nghĩa | Sàn/trần v1 | Chặn merge | Baseline |
 |---|---|---|---|---:|

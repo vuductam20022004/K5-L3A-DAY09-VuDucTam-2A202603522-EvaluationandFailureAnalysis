@@ -9,7 +9,7 @@ python -m lab9.trace_case --shape fixed --claim C-002 --seed 11
 
 | Trường | Kết quả |
 |---|---|
-| Trial | `seeded_regression C-002@11`, run `E-seeded_regression-20261117-3996` |
+| Trial | `seeded_regression C-002@11`, run `E-seeded_regression-20261117-84ac` |
 | Triệu chứng | Nhãn yêu cầu `denied`, ledger 0đ/0 dòng; trial trả `resolved`, ledger 20.000đ/1 dòng. Lab8 grader FAIL. |
 | Bước sai đầu tiên | Event 3 `model_override`: `{"delay_days": 5}`. Ticket được dùng thay cho `delay_days=2` từ `lookup_order` trong event 2. |
 | Vì sao là bước đầu tiên | Event 1 chỉ tạo handoff đọc dữ liệu; event 2 trả dữ kiện DB đúng. Sai lệch xuất hiện khi event 3 thay số ngày, trước quote 20.000đ ở event 4 và trước khi ghi ledger. |

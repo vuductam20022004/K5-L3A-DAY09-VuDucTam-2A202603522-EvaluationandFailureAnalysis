@@ -6,8 +6,8 @@ Code và grader: nhánh `starter/d09`; ghi commit chốt khi tạo repo cá nhâ
 
 | Bộ | Run baseline | SHA eval set | Kích thước | Seed | Spec |
 |---|---|---|---|---|---|
-| v1 | `E-swarm-20261117-3996` | `3996585493a3` | 14 item × 5 | 11,22,33,44,55 | `config/metric_spec.yaml` 1.0 |
-| v2 | `E-swarm-20261117-23cc` | `23cc981741b1` | 28 item × 5, gồm 14 ca đối kháng | 11,22,33,44,55 | `config/metric_spec_v2.yaml` 2.0 |
+| v1 | `E-swarm-20261117-84ac` | `84acf97b75bf` | 14 item × 5 | 11,22,33,44,55 | `config/metric_spec.yaml` 1.0 |
+| v2 | `E-swarm-20261117-61fb` | `61fbaeda233b` | 28 item × 5, gồm 14 ca đối kháng | 11,22,33,44,55 | `config/metric_spec_v2.yaml` 2.0 |
 
 ## Kết quả và quyết định v1
 
