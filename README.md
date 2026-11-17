@@ -1,5 +1,23 @@
 # Lab 8 — From Workflows to Agents (LogiX-VN: một task, bốn kiến trúc)
 
+## Lab 9 — Evaluation & Failure Analysis
+
+Repo này giữ toàn bộ bài Lab8 làm nền và bổ sung Lab9 trong `src/lab9/`. Phần Lab9 đánh giá shape `swarm` bằng MockLLM trên eval set v1/v2, hiệu chỉnh judge, chấm bằng code, phân tích trace và chặn regression qua CI. Các hướng dẫn nộp Lab8 phía dưới là tài liệu gốc của bài trước; kết quả Lab9 nằm tại [eval card](docs/eval_card.md), [failure taxonomy](docs/failure_taxonomy.md), [trace case](docs/trace_case.md), [judge audit](docs/judge_audit.md) và [PRD v1.1](docs/PRD_v1.1.md).
+
+Chạy từ `src/` (Python 3.11–3.13):
+
+```powershell
+python -m pip install -r requirements.txt -r requirements-lab9.txt
+python -m lab9.smoke
+python -m lab9.evalset --check
+python -m lab9.evalset --v2
+python -m pytest -q -m student -o addopts= -k lab9
+python -m lab9.mutation --spec config/metric_spec_v2.yaml --baseline reports/baseline_v2.json
+python -m lab9.traps --pr reports/eval_slice_regression.json --baseline reports/baseline_v2.json --spec config/metric_spec_v2.yaml
+```
+
+Baseline và báo cáo đánh giá trong `src/reports/` được sinh bằng `python -m lab9.eval`; workflow `.github/workflows/eval-gate.yml` chạy gate khi mở pull request. Các file hướng dẫn Lab9 chỉ dùng để tham khảo khi làm bài đã được bỏ khỏi gói nộp.
+
 AI20K K5, ngày 8. Nhóm xử lý claim hoàn phí vận chuyển của công ty giả lập LogiX-VN bằng **bốn kiến trúc** (workflow, single agent, orchestrator, swarm), rồi dựa trên số đo để chọn kiến trúc **ít tự chủ nhất mà vẫn làm được việc**. Dữ liệu là dữ liệu giả. Không cần GPU, API key hay internet trong giờ lab; chạy được trên Windows, macOS và Linux.
 
 **Loại bài:** Nhóm · **Thời lượng:** 4 giờ tại lớp (13:30–17:30) · **Deadline:** lớp sáng 23h59 GMT+7 ngày lab; lớp chiều/tối 11h59 GMT+7 ngày hôm sau ([SUBMISSION.md](SUBMISSION.md#deadline-gmt7))
